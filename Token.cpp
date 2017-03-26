@@ -1,4 +1,4 @@
 #include "Token.h"
 
-const Token Token::EOF_TOEKN = Token(-1);
+const std::shared_ptr<Token> Token::EOF_TOEKN = std::make_shared<Token>(-1);
 const std::string Token::EOL_TOKEN = std::string("\\n");

@@ -49,7 +49,7 @@
     <ClCompile>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -77,12 +77,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Lexer.cpp" />
+    <ClCompile Include="LineNumberReader.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Token.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Lexer.h" />
+    <ClInclude Include="LineNumberReader.h" />
     <ClInclude Include="StoneException.h" />
+    <ClInclude Include="StrCommon.hpp" />
     <ClInclude Include="Token.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
