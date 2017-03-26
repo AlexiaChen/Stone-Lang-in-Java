@@ -1,2 +1,2 @@
 # stone-lang-in-cpp
- Implementation of Stone Langaguage in cpp
+ Implementation of Stone Language in cpp
