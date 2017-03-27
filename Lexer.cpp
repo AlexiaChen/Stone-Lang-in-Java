@@ -53,6 +53,7 @@ void Lexer::readLine()
 	{
 		std::smatch match;
 		line = StrCommon::trim(line);
+		// use std::regex_search extract substring so cannot use std::regex_match 
 		if (std::regex_search(line, match, m_pattern))
 		{
 			std::string token = match[1];
