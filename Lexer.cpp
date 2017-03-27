@@ -47,20 +47,34 @@ void Lexer::readLine()
 	}
 
 	uint32_t line_number = m_reader->getLineNumber();
+	
 
-	std::vector<std::string> tokens = StrCommon::split(line, "\\s+");
-
-	for (const auto& token : tokens)
+	while (!line.empty())
 	{
-		if (std::regex_match(token, m_pattern))
+		std::smatch match;
+		line = StrCommon::trim(line);
+		if (std::regex_search(line, match, m_pattern))
 		{
+			std::string token = match[1];
 			addToken(line_number, token);
+			if (line.find_first_of(token) != std::string::npos)
+			{
+				line.erase(line.find_first_of(token), token.length());
+			}
+			else
+			{
+				line.clear();
+				continue;
+			}
+
+
 		}
 		else
 		{
 			throw ParseException("bad token at line " + std::to_string(line_number));
 		}
 	}
+	
 
 	m_queue.push_back(std::make_shared<IdentifierToken>(line_number, Token::EOL_TOKEN));
 
@@ -101,7 +115,7 @@ void Lexer::addToken(uint32_t line_num, const std::string& token)
 std::string Lexer::toStringLiteral(const std::string& str)
 {
 	std::ostringstream stringStream;
-	stringStream << "\"" << str << "\"";
+	stringStream  << str;
 	return stringStream.str();
 }
 

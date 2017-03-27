@@ -6,7 +6,9 @@
 class RunTimeException : public std::exception
 {
 public:
-	explicit RunTimeException(const std::string &what_arg){};
+	explicit RunTimeException(const std::string &what_arg):std::exception(what_arg.c_str()){};
+	~RunTimeException() {}
+	 const char* what() const  { return std::exception::what(); }
 
 };
 
@@ -16,6 +18,8 @@ class StoneException : public RunTimeException
 {
 public:
 	explicit StoneException(const std::string &msg) : RunTimeException(msg){};
+	~StoneException() {}
+	const char* what() const { return RunTimeException::what(); }
 
 };
 
@@ -23,11 +27,11 @@ public:
 class ParseException : public std::exception
 {
 public:
-	explicit ParseException(const std::string& msg):m_msg(msg){}
+	explicit ParseException(const std::string& msg) :std::exception(msg.c_str()){};
+	~ParseException(){}
 
-	const char* what(){ return m_msg.c_str(); }
-private:
-	std::string m_msg;
+	const char* what() const { return std::exception::what(); }
+
 };
 
 
