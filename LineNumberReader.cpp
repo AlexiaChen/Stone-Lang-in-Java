@@ -16,13 +16,13 @@ LineNumberReader::~LineNumberReader()
 
 std::string LineNumberReader::readLine()
 {
-	std::string line;
-	std::getline(m_infile, line);
-	m_current_line_number++;
-	return line;
+    std::string line;
+    std::getline(m_infile, line);
+    m_current_line_number++;
+    return line;
 }
 
 uint32_t LineNumberReader::getLineNumber() const
 {
-	return m_current_line_number;
+    return m_current_line_number;
 }

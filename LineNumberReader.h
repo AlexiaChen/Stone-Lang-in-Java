@@ -9,13 +9,13 @@
 class LineNumberReader
 {
 public:
-	explicit LineNumberReader(const std::string& file);
-	~LineNumberReader();
+    explicit LineNumberReader(const std::string& file);
+    ~LineNumberReader();
 public:
-	std::string readLine();
-	uint32_t getLineNumber() const;
+    std::string readLine();
+    uint32_t getLineNumber() const;
 private:
-	std::ifstream m_infile;
-	uint32_t m_current_line_number;
+    std::ifstream m_infile;
+    uint32_t m_current_line_number;
 };
 #endif
