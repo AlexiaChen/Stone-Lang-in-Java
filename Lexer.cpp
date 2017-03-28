@@ -82,7 +82,8 @@ void Lexer::addToken(uint32_t line_num, const std::string& token)
     static const std::string str_pattern = "\"(\\\\\"|\\\\\\\\|\\\\n|[^\"])*\"";
     static const std::string id_pattern = "[A-Z_a-z][A-Z_a-z0-9]*|==|<=|>=|&&|\\|\\||[[:punct:]]";
 
-    // exclude comment
+    (void)id_pattern;// unused 
+	// exclude comment
     std::regex regex(comments_pattern);
     if (!std::regex_match(token, regex) && !token.empty())
     {

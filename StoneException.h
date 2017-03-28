@@ -8,7 +8,7 @@ class RunTimeException : public std::exception
 public:
     explicit RunTimeException(const std::string &what_arg):std::exception(what_arg.c_str()){};
     ~RunTimeException() {}
-	    const char* what() const  { return std::exception::what(); }
+	const char* what() const  { return std::exception::what(); }
 };
 
 
@@ -27,7 +27,6 @@ class ParseException : public std::exception
 public:
     explicit ParseException(const std::string& msg) :std::exception(msg.c_str()){};
     ~ParseException(){}
-
     const char* what() const { return std::exception::what(); }
 };
 #endif

@@ -12,7 +12,7 @@ class Lexer
 public:
     static std::string regex_pattern;
 public:
-    Lexer(const std::string& file);
+    explicit Lexer(const std::string& file);
     ~Lexer();
     typedef std::shared_ptr<Token> TokenPtr;
 public:

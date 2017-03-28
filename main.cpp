@@ -76,9 +76,8 @@ void testLexer()
     }
     catch (const std::exception& exp)
     {
-	    std::cout << exp.what() << std::endl;
+        std::cout << exp.what() << std::endl;
     }
-	
 
     int n;
     std::cin >> n;
