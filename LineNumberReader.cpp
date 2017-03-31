@@ -1,7 +1,5 @@
 #include "LineNumberReader.h"
 
-
-
 LineNumberReader::LineNumberReader(const std::string& file):
 m_infile(file),
 m_current_line_number(0)
