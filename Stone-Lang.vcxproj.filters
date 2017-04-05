@@ -19,6 +19,12 @@
     <Filter Include="头文件\Tokenizer">
       <UniqueIdentifier>{f0e44b7c-7f67-4f59-9ca0-b5428f8e145e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Parser">
+      <UniqueIdentifier>{f09033a4-512b-4703-8578-8d2b815da647}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Parser">
+      <UniqueIdentifier>{d11ff7e3-07f3-4de6-a429-070cc158e2f9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -50,5 +56,10 @@
     <ClInclude Include="StrCommon.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="StoneBNF.txt">
+      <Filter>资源文件</Filter>
+    </Text>
   </ItemGroup>
 </Project>

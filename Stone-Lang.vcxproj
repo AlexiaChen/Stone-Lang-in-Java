@@ -90,6 +90,9 @@
     <ClInclude Include="StrCommon.hpp" />
     <ClInclude Include="Token.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="StoneBNF.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

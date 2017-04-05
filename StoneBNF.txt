@@ -1,0 +1,8 @@
+primary ::= "(" expr ")" | NUMBER | STRING | IDENTIFIER
+factor ::= primary
+OP ::= "+" | "-" | "*" | "/" | "%"
+expr ::= factor | factor OP factor
+block ::= "{"  "}" | "{" (";" | EOL) "}" | "{" (";" | EOL) statement "}" 
+          | "{" statement "}" | "{" statement (";" | EOL) "}" | "{" statement (";" | EOL) statement"}"
+statement ::= "if" expr block | "if" expr block "else" block | "while" expr block | expr
+program ::= statement (";" | EOL) | (";" | EOL)
