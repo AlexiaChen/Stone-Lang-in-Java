@@ -38,6 +38,7 @@ public:
     virtual bool isNumber() override { return true; }
     virtual std::string getText() override { return std::to_string(m_value); }
     virtual int32_t getNumber() override { return m_value; }
+    virtual std::string getType() override { return std::string("Number"); }
 
     NumToken(int32_t line, int32_t value):Token(line),m_value(value){}
 private:
@@ -49,6 +50,7 @@ class IdentifierToken : public Token
 public:
     virtual bool isIdentifier() override { return true; }
     virtual std::string getText() override { return m_text; }
+    virtual std::string getType() override { return std::string("Identifier"); }
 
     IdentifierToken(int32_t line, const std::string& id) :Token(line), m_text(id){}
 private:
@@ -60,6 +62,7 @@ class StringToken : public Token
 public:
     virtual bool isString() override{ return true; }
     virtual std::string getText() override { return m_str; }
+    virtual std::string getType() override { return std::string("String"); }
 
     StringToken(int32_t line, const std::string& str):Token(line),m_str(str){}
 private:

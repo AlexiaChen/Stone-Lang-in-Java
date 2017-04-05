@@ -18,6 +18,7 @@ public:
     virtual bool isString() { return false; }
     virtual int32_t getNumber() { throw StoneException("not number token"); }
     virtual std::string getText(){ return std::string(""); }
+    virtual std::string getType() { return std::string(""); }
 public:
     explicit Token(int32_t line):m_line_number(line){}
 private:

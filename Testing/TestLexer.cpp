@@ -8,11 +8,7 @@
 #define BOOST_TEST_MODULE lexer_test 
 #include <boost/test/unit_test.hpp>
 
-#ifdef _DEBUG
-#pragma comment(lib,"libboost_unit_test_framework-vc120-mt-gd-1_63.lib")
-#else
-#pragma comment(lib,"libboost_unit_test_framework-vc120-mt-1_63.lib")
-#endif
+
 
 BOOST_AUTO_TEST_CASE(regex_pattern)
 {
@@ -96,7 +92,8 @@ BOOST_AUTO_TEST_CASE(lexer)
         for (token = lex->read();
             token->getLineNumber() != Token::EOF_TOEKN->getLineNumber(); token = lex->read())
         {
-            std::cout << "Line Num " << token->getLineNumber() << " => " << token->getText() << std::endl;
+            std::cout << "Line Num " << token->getLineNumber() << " => " << 
+                "(" << token->getType() << "," << token->getText() << ")" << std::endl;
             
             BOOST_CHECK(!token->getText().empty());
         }
