@@ -84,6 +84,9 @@
     <ClCompile Include="Token.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AbstractSyntaxTree.hpp" />
+    <ClInclude Include="AbstractSyntaxTreeLeaf.hpp" />
+    <ClInclude Include="AbstractSyntaxTreeList.hpp" />
     <ClInclude Include="Lexer.h" />
     <ClInclude Include="LineNumberReader.h" />
     <ClInclude Include="StoneException.h" />

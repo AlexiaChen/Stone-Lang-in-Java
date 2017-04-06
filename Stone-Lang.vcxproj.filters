@@ -25,6 +25,9 @@
     <Filter Include="源文件\Parser">
       <UniqueIdentifier>{d11ff7e3-07f3-4de6-a429-070cc158e2f9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\ast">
+      <UniqueIdentifier>{121f8788-a84e-484d-845d-67a2fa6017a6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -55,6 +58,15 @@
     </ClInclude>
     <ClInclude Include="StrCommon.hpp">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractSyntaxTree.hpp">
+      <Filter>头文件\ast</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractSyntaxTreeLeaf.hpp">
+      <Filter>头文件\ast</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractSyntaxTreeList.hpp">
+      <Filter>头文件\ast</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
