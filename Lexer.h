@@ -17,6 +17,7 @@ public:
     typedef std::shared_ptr<Token> TokenPtr;
 public:
     TokenPtr read();
+    TokenPtr peek(uint32_t i);
 protected:
     void readLine();
     void addToken(uint32_t line_num, const std::string& token);

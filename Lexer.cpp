@@ -34,6 +34,14 @@ Lexer::TokenPtr Lexer::read()
     }
 }
 
+Lexer::TokenPtr Lexer::peek(uint32_t i)
+{
+    if (fillQueue(i))
+        return m_queue[i];
+    else
+        return Token::EOF_TOEKN;
+}
+
 void Lexer::readLine()
 {
     std::string line;

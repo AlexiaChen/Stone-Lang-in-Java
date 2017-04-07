@@ -81,14 +81,17 @@
     <ClCompile Include="Lexer.cpp" />
     <ClCompile Include="LineNumberReader.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Parser.cpp" />
     <ClCompile Include="Token.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AbstractSyntaxTree.hpp" />
     <ClInclude Include="AbstractSyntaxTreeLeaf.hpp" />
     <ClInclude Include="AbstractSyntaxTreeList.hpp" />
+    <ClInclude Include="ElementClasses.hpp" />
     <ClInclude Include="Lexer.h" />
     <ClInclude Include="LineNumberReader.h" />
+    <ClInclude Include="Parser.h" />
     <ClInclude Include="StoneException.h" />
     <ClInclude Include="StrCommon.hpp" />
     <ClInclude Include="Token.h" />
