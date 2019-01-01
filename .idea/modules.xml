@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/stone-lang-in-cpp.iml" filepath="$PROJECT_DIR$/.idea/stone-lang-in-cpp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stone-lang-in-cpp.iml" filepath="$PROJECT_DIR$/stone-lang-in-cpp.iml" />
     </modules>
   </component>
 </project>
